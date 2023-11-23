@@ -1,0 +1,105 @@
+/*
+!important Sirve para que si o si haga el estilo que este dentro, el display none y block nos permite dar una variedad de estilos las cuales hacen que el diseño de una pagina sea mas interactiva y estas propiedades van o pueden ir acompañadas (para una mejor interaccion) con el :hover que esto significa que cuando ponemos encima el cursor se realiza dicho estilo. 
+*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+nav .mobile{
+    display: none;
+
+    position: sticky;
+    top: 0;
+}
+
+nav .mobile .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+nav .mobile .header .more button{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+nav .logo{
+    min-width: 250px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+}
+nav a:hover{
+    background-color: #00c3ff;
+    color: black;
+}
+nav .desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+nav .desktop .primary,
+nav .desktop .secondary{
+    display: flex;
+}
+
+nav .desktop .secondary.mini{
+    display: none;
+}
+
+@media screen and (max-width:900px) {
+    nav .log{
+        min-width: 100px;
+    }
+
+    nav .secondary.full{
+        display: none;
+    }
+
+    nav .secondary.mini{
+        display: block !important;
+    }
+
+    nav .secondary.mini .submenu{
+        background-color: black;
+        position: absolute;
+        display: none;
+        right: 0;
+        width: 180px;
+    }
+
+    nav .secondary.mini:hover .submenu{
+        display: block;
+    }
+    /*¿COMO HACEMOS APARECER LAS OPCIONES?
+    */
+}
+
+@media screen and (max-width:670px) {
+    nav .desktop{
+        display: none;
+    }
+
+    nav .mobile{
+        display: block;
+    }
+}
