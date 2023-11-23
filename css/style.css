@@ -147,3 +147,9 @@ nav .desktop .secondary.mini{
     Es lo mismo si lo ponemos aca o arriba
     */
 }
+
+@media screen and (max-width:530px) {
+    .search-bar{
+        width: 90%;
+    }
+}
