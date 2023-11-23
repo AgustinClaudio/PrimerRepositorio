@@ -103,3 +103,47 @@ nav .desktop .secondary.mini{
         display: block;
     }
 }
+
+
+/*Buscador*/
+.search-bar {
+    border: 1px solid #ccc;
+    /* width: 700px; */
+    width: 60%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 5px 10px;
+    margin: 100px auto;
+    transition: all 0.3s ease-in-out;
+}
+.search-bar:focus-within{
+    border: 1px solid #00c3ff;
+    box-shadow:  0 2px 5px rgb(0, 0, 0, 0.2);
+}
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 10px;
+    flex: 1;
+    font-size: 18px;
+}
+.search-bar .actions button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease-in-out;
+    /* transition: color 0.3s ease-in-out; 
+    Es lo mismo si lo ponemos aca o abajo
+    */
+}
+.search-bar .actions button:hover{
+    color: #2979e2;
+    /* transition: color 0.3s ease-in-out; 
+    Es lo mismo si lo ponemos aca o arriba
+    */
+}
